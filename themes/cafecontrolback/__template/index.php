@@ -2,14 +2,13 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-        <meta name="mit" content="2023-01-02T15:38:40-03:00+174612">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <title>CafeControl - Gerencie suas contas com um bom café</title>
-    <link rel="icon" type="image/png" href=" <?= theme("/assets/images/favicon.png"); ?> "/>
-    <link rel="stylesheet" href=" <?=theme("/assets/css/styles.css"); ?> "/>
-    <link rel="stylesheet" href=" <?=theme("/assets/css/boot.css"); ?> "/>
-    <link rel="stylesheet" href=" <?=theme("/assets/css/style.css");?> "/>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/boot.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
 
@@ -17,14 +16,14 @@
 <header class="main_header gradient gradient-green">
     <div class="container">
         <div class="main_header_logo">
-            <h1><a class="icon-coffee transition" title="Home" href="../..">Cafe<b>Control</b></a></h1>
+            <h1><a class="icon-coffee transition" title="Home" href="./">Cafe<b>Control</b></a></h1>
         </div>
 
         <nav class="main_header_nav">
             <span class="main_header_nav_mobile j_menu_mobile_open icon-menu icon-notext radius transition"></span>
             <div class="main_header_nav_links j_menu_mobile_tab">
                 <span class="main_header_nav_mobile_close j_menu_mobile_close icon-error icon-notext transition"></span>
-                <a class="link transition radius active" title="Home" href="../..">Home</a>
+                <a class="link transition radius active" title="Home" href="./">Home</a>
                 <a class="link transition radius" title="Sobre" href="?file=about">Sobre</a>
                 <a class="link transition radius" title="Blog" href="?file=blog">Blog</a>
                 <a class="link login transition radius icon-sign-in" title="Entrar" href="?file=auth-login">Entrar</a>
@@ -35,25 +34,17 @@
 
 <!--CONTENT-->
 <main class="main_content">
-    <!--exibir-->
-    <?= $this->section("content");?>
+    <?php
+    $file = filter_input(INPUT_GET, "file", FILTER_SANITIZE_SPECIAL_CHARS);
+    if (empty($file)) {
+        require __DIR__ . "/views/home.php";
+    } elseif ($file && file_exists(__DIR__ . "/views/{$file}.php")) {
+        require __DIR__ . "/views/{$file}.php";
+    } else {
+        require __DIR__ . "/views/404.php";
+    }
+    ?>
 </main>
-
-<?php if ($this->section("optout")): ?>
-    <!--caso existes optout exibe ele-->
-    <?= $this->section("optout") ;?>
-<?php else: ?>
-    <!--caso contrario acessa o view -->
-    <article class="footer_optout">
-        <div class="footer_optout_content content">
-            <span class="icon icon-coffee icon-notext"></span>
-            <h2>Comece a controlar suas contas agora mesmo</h2>
-            <p>É rápido, simples e gratuito!</p>
-            <a href="?file=auth-register"
-               class="footer_optout_btn gradient gradient-green gradient-hover radius icon-check-square-o">Quero controlar</a>
-        </div>
-    </article>
-<?php endif; ?>
 
 <!--FOOTER-->
 <footer class="main_footer">
@@ -68,7 +59,7 @@
 
             <article class="main_footer_content_item">
                 <h2>Mais:</h2>
-                <a class="link transition radius active" title="Home" href="../..">Home</a>
+                <a class="link transition radius active" title="Home" href="./">Home</a>
                 <a class="link transition radius" title="Sobre" href="?file=about">Sobre</a>
                 <a class="link transition radius" title="Blog" href="?file=blog">Blog</a>
                 <a class="link transition radius" title="Entrar" href="?file=auth-login">Entrar</a>
@@ -91,9 +82,9 @@
     </div>
 </footer>
 
-<script src=" <?=theme("/assets/js/jquery.min.js");?>  "></script>
-<script src="<?=theme("/assets/js/jquery-ui.js");?> "></script>
-<script src="<?=theme("/assets/js/scripts.js");?> "></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/scripts.js"></script>
 
 </body>
 </html>

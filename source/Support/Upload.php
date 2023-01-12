@@ -7,9 +7,9 @@ use CoffeeCode\Uploader\Image;
 use CoffeeCode\Uploader\Media;
 
 /**
- * fsphp-mvc | Class Upload
+ * FSPHP | Class Upload
  *
- * @author Issufi Badji <ibjsoftwares@gmail.com>
+ * @author Robson V. Leite <cursos@upinside.com.br>
  * @package Source\Support
  */
 class Upload

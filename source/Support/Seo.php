@@ -5,9 +5,9 @@ namespace Source\Support;
 use CoffeeCode\Optimizer\Optimizer;
 
 /**
- * fsphp-mvc | Class Seo
+ * FSPHP | Class Seo
  *
- *  @author Issufi Badji <ibjsoftwares@gmail.com>
+ * @author Robson V. Leite <cursos@upinside.com.br>
  * @package Source\Support
  */
 class Seo

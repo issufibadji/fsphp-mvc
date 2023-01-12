@@ -3,9 +3,9 @@
 namespace Source\Core;
 
 /**
- * fsphp-mvc  | Class Connect [ Singleton Pattern ]
+ * FSPHP | Class Connect [ Singleton Pattern ]
  *
- * @author Issufi Badji <ibjsoftwares@gmail.com>
+ * @author Robson V. Leite <cursos@upinside.com.br>
  * @package Source\Core
  */
 class Connect
@@ -24,7 +24,7 @@ class Connect
     /**
      * @return \PDO
      */
-    public static function getInstance(): \PDO
+    public static function getInstance(): ?\PDO
     {
         if (empty(self::$instance)) {
             try {
@@ -35,7 +35,7 @@ class Connect
                     self::OPTIONS
                 );
             } catch (\PDOException $exception) {
-                die("<h1>Whoops! Erro ao conectar...</h1>");
+                redirect("/ops/problemas");
             }
         }
 

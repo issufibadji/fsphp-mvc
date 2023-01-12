@@ -5,9 +5,9 @@ namespace Source\Core;
 use Source\Support\Message;
 
 /**
- * fsphp-mvc  | Class Model Layer Supertype Pattern
+ * FSPHP | Class Model Layer Supertype Pattern
  *
- * @author Issufi Badji <ibjsoftwares@gmail.com>
+ * @author Robson V. Leite <cursos@upinside.com.br>
  * @package Source\Models
  */
 abstract class Model

@@ -128,13 +128,12 @@ function str_limit_chars(string $string, int $limit, string $pointer = "..."): s
  */
 
 /**
- * @param string|null $path
+ * @param string $path
  * @return string
- * previsão de ambiente de teste e de deploy
  */
 function url(string $path = null): string
 {
-    if (strpos($_SERVER['HTTP_HOST'], "localhost")) {
+    if (strpos($_SERVER['HTTP_HOST'], "localhost")!==false) {
         if ($path) {
             return CONF_URL_TEST . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
         }
@@ -148,22 +147,34 @@ function url(string $path = null): string
     return CONF_URL_BASE;
 }
 
+/**
+ * @return string
+ */
+function url_back(): string
+{
+    return ($_SERVER['HTTP_REFERER'] ?? url());
+}
+
+/**
+ * @param string|null $path
+ * @return string
+ */
 function theme(string $path = null): string
 {
-    if ($_SERVER['HTTP_HOST']=="localhost") {
+    if (strpos($_SERVER['HTTP_HOST'], "localhost")!==false) {
         if ($path) {
-            return CONF_URL_TEST ."/themes/".CONF_VIEW_THEME. "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+            return CONF_URL_TEST . "/themes/" . CONF_VIEW_THEME . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
         }
-        return CONF_URL_TEST."/themes/".CONF_VIEW_THEME;
+
+        return CONF_URL_TEST . "/themes/" . CONF_VIEW_THEME;
     }
 
     if ($path) {
-        return CONF_URL_BASE ."/themes/".CONF_VIEW_THEME. "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
+        return CONF_URL_BASE . "/themes/" . CONF_VIEW_THEME . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
     }
 
-    return CONF_URL_BASE."/themes/".CONF_VIEW_THEME;
+    return CONF_URL_BASE . "/themes/" . CONF_VIEW_THEME;
 }
-
 
 /**
  * @param string $url
@@ -176,9 +187,11 @@ function redirect(string $url): void
         exit;
     }
 
-    $location = url($url);
-    header("Location: {$location}");
-    exit;
+    if (filter_input(INPUT_GET, "route", FILTER_DEFAULT) != $url) {
+        $location = url($url);
+        header("Location: {$location}");
+        exit;
+    }
 }
 
 /**

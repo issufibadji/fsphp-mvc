@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 /**
- * fsphp-mvc| Class Email
+ * FSPHP | Class Email
  *
  * @author Robson V. Leite <cursos@upinside.com.br>
  * @package Source\Core

@@ -5,15 +5,16 @@ namespace Source\Core;
 use Source\Support\Seo;
 
 /**
- * fsphp-mvc | Class App
+ * FSPHP | Class Controller
  *
- * @author Issufi Badji <ibjsoftwares@gmail.com>
+ * @author Robson V. Leite <cursos@upinside.com.br>
  * @package Source\Core
  */
 class Controller
 {
-    /** @var view */
+    /** @var View */
     protected $view;
+
     /** @var Seo */
     protected $seo;
 

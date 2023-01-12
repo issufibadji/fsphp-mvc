@@ -10,27 +10,32 @@ define("CONF_DB_NAME", "fullstackphp");
 /**
  * PROJECT URLs
  */
-define("CONF_URL_BASE", "http://www.cafecontrol.com.br");
-define("CONF_URL_TEST", "http://www.localhost/fsphp-mvc");
+define("CONF_URL_BASE", "https://www.cafecontrol.com.br");
+define("CONF_URL_TEST", "https://www.localhost/cafecontrol");
 define("CONF_URL_ADMIN", "/admin");
 
 /**
  * SITE
  */
-define("CONF_SITE_NAME", "UpInside");
+define("CONF_SITE_NAME", "CaféControl");
+define("CONF_SITE_TITLE", "Gerencie suas contas com o melhor café");
+define("CONF_SITE_DESC",
+    "O CafeControl é um gerenciador de contas simples, poderoso e gratuito. O prazer de tomar um café e ter o controle total de suas contas.");
 define("CONF_SITE_LANG", "pt_BR");
-define("CONF_SITE_DOMAIN", "ibjsoftwares.com.br");
+define("CONF_SITE_DOMAIN", "upinside.com.br");
 
 /**
  * SOCIAL
  */
-define("CONF_SOCIAL_TWITTER_CREATOR", "@ibjsoftwares");
-define("CONF_SOCIAL_TWITTER_PUBLISHER", "@ibjsoftwares");
+define("CONF_SOCIAL_TWITTER_CREATOR", "@robsonvleite");
+define("CONF_SOCIAL_TWITTER_PUBLISHER", "@robsonvleite");
 define("CONF_SOCIAL_FACEBOOK_APP", "626590460695980");
-define("CONF_SOCIAL_FACEBOOK_PAGE", "ibjsoftwares");
-define("CONF_SOCIAL_FACEBOOK_AUTHOR", "issufibj");
+define("CONF_SOCIAL_FACEBOOK_PAGE", "upinside");
+define("CONF_SOCIAL_FACEBOOK_AUTHOR", "robsonvleiteoficial");
 define("CONF_SOCIAL_GOOGLE_PAGE", "107305124528362639842");
 define("CONF_SOCIAL_GOOGLE_AUTHOR", "103958419096641225872");
+define("CONF_SOCIAL_INSTAGRAM_PAGE", "robsonvleite");
+define("CONF_SOCIAL_YOUTUBE_PAGE", "upinside");
 
 /**
  * DATES
@@ -83,8 +88,9 @@ define("CONF_IMAGE_QUALITY", ["jpg" => 75, "png" => 5]);
 define("CONF_MAIL_HOST", "smtp.sendgrid.net");
 define("CONF_MAIL_PORT", "587");
 define("CONF_MAIL_USER", "apikey");
-define("CONF_MAIL_PASS", "ibj@2023");//alterara depois
-define("CONF_MAIL_SENDER", ["name" => "IBJ SOFTWARES", "address" => "ibjsoftwares.com"]);
+define("CONF_MAIL_PASS", "**************************");
+define("CONF_MAIL_SENDER", ["name" => "Robson V. Leite", "address" => "cursos@upinside.com.br"]);
+define("CONF_MAIL_SUPPORT", "cursos@upinside.com.br");
 define("CONF_MAIL_OPTION_LANG", "br");
 define("CONF_MAIL_OPTION_HTML", true);
 define("CONF_MAIL_OPTION_AUTH", true);
