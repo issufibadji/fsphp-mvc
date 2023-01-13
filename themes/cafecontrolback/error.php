@@ -1,4 +1,4 @@
-<?php $this->layout("theme"); ?>
+<?php $v->layout("theme"); ?>
 
 <article class="not_found">
     <div class="container content">

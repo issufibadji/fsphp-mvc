@@ -11,7 +11,7 @@ define("CONF_DB_NAME", "fullstackphp");
  * PROJECT URLs
  */
 define("CONF_URL_BASE", "https://www.cafecontrol.com.br");
-define("CONF_URL_TEST", "https://www.localhost/cafecontrol");
+define("CONF_URL_TEST", "https://www.localhost/fsphp");
 define("CONF_URL_ADMIN", "/admin");
 
 /**

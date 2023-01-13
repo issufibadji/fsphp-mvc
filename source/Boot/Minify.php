@@ -1,5 +1,5 @@
 <?php
-if (strpos(url(), "localhost")!==false) {
+if (strpos(url(), "localhost")) {
     /**
      * CSS
      */

@@ -34,11 +34,11 @@
 
 <!--CONTENT-->
 <main class="main_content">
-    <?= $this->section("content"); ?>
+    <?= $v->section("content"); ?>
 </main>
 
-<?php if ($this->section("optout")): ?>
-    <?= $this->section("optout"); ?>
+<?php if ($v->section("optout")): ?>
+    <?= $v->section("optout"); ?>
 <?php else: ?>
     <article class="footer_optout">
         <div class="footer_optout_content content">
