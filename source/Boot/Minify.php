@@ -27,7 +27,7 @@ if (strpos(url(), "localhost")) {
     $minJS->add(__DIR__ . "/../../shared/scripts/jquery.min.js");
     $minJS->add(__DIR__ . "/../../shared/scripts/jquery-ui.js");
 
-    //theme CSS
+    //theme JS
     $jsDir = scandir(__DIR__ . "/../../themes/" . CONF_VIEW_THEME . "/assets/js");
     foreach ($jsDir as $js) {
         $jsFile = __DIR__ . "/../../themes/" . CONF_VIEW_THEME . "/assets/js/{$js}";

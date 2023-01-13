@@ -117,7 +117,7 @@
         </div>
     </article>
 
-
+<!--usando sessão de script _theme-->
 <?php $v->start("scripts"); ?>
 <div id="fb-root"></div>
 <script>(function (d, s, id) {

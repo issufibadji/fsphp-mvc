@@ -69,7 +69,7 @@
             <p>Confira as principais dúvidas e repostas sobre o CaféControl.</p>
         </header>
         <div class="faq_asks">
-            <?php for ($i = 0; $i < 6; $i++): ?>
+            <?php for ($i = 0; $i < 8; $i++): ?>
                 <article class="faq_ask j_collapse">
                     <h4 class="j_collapse_icon icon-plus">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Deserunt, soluta.</h4>

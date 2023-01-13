@@ -7,6 +7,7 @@
     <?= $head; ?>
 
     <link rel="icon" type="image/png" href="<?= theme("/assets/images/favicon.png"); ?>"/>
+    <!--style minificado-->
     <link rel="stylesheet" href="<?= theme("/assets/style.css"); ?>"/>
 </head>
 <body>
@@ -90,8 +91,9 @@
         </section>
     </div>
 </footer>
-
+<!--Script minificado-->
 <script src="<?= theme("/assets/scripts.js"); ?>"></script>
+<!--Sessão deScript -->
 <?= $v->section("scripts"); ?>
 
 </body>

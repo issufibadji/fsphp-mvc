@@ -1,3 +1,4 @@
+<!--Sessão de layout tema -->
 <?php $v->layout("_theme"); ?>
 
 <!--FEATURED-->
@@ -95,7 +96,7 @@
             <span data-modal=".home_video_modal" class="icon-play-circle-o icon-notext transition"></span>
         </header>
     </div>
-
+    <!--Videos de youtube -->
     <div class="home_video_modal j_modal_close">
         <div class="home_video_modal_box">
             <div class="embed">
